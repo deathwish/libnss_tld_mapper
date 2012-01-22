@@ -1,0 +1,17 @@
+*.o
+*.lo
+*.la
+*.so.*
+*.swp
+*.tar.gz
+.deps/
+.libs/
+autom4te.cache/
+Makefile
+config.h
+config.log
+config.status
+configure
+libtool
+stamp-h1
+*~
