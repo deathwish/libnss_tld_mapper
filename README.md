@@ -28,12 +28,17 @@ LD_PRELOAD, for example:
 
 Several environment variables may be used to influence the behavior of libnss_tld_mapper:
 
-* TLD_MAPPER_TLD: The TLD that the mapper should use, defaults to '.dev'.
-* TLD_MAPPER_SERVICES: The hosts service line that libnss_tld_mapper should use when inserting itself
-  as a DNS resolver service. As the NSS API provides no mechanism for reading the current resolver service
-  configuration, this is set to 'files dns' by default. If this environment variable is set, its contents
-  will be appended to rather then the default. For example, running
+## TLD_MAPPER_TLD ##
+
+The TLD that the mapper should use, defaults to '.dev'.
+
+## TLD_MAPPER_SERVICES ##
+
+The hosts service line that libnss_tld_mapper should use when inserting itself
+as a DNS resolver service. As the NSS API provides no mechanism for reading the current resolver service
+configuration, this is set to 'files dns' by default. If this environment variable is set, its contents
+will be appended to rather then the default. For example, running
 
     $ export TLD_MAPPER_SERVICES `sed -n 's/^hosts: *\(.*\)$/\1/p' /etc/nsswitch.conf`
 
-  would cause subsequent usages of the library to use the systems resolver configuration.
+would cause subsequent usages of the library to use the systems resolver configuration.
