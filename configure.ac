@@ -1,5 +1,5 @@
 AC_PREREQ(2.5)
-AC_INIT(libnss_tld_mapper, [0.1], [lance.m.cooper@gmail.com])
+AC_INIT(libnss_tld_mapper, [0.1.1], [lance.m.cooper@gmail.com])
 AC_CONFIG_SRCDIR([src/libnss_tld_mapper.c])
 AC_CONFIG_MACRO_DIR([m4])
 AM_INIT_AUTOMAKE
